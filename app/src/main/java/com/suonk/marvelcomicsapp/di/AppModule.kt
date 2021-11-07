@@ -1,9 +1,9 @@
 package com.suonk.marvelcomicsapp.di
 
 import com.suonk.marvelcomicsapp.api.MarvelApiService
-import com.suonk.marvelcomicsapp.api.MarvelApiService.Companion.BASE_URL
 import com.suonk.marvelcomicsapp.repositories.DefaultRepository
 import com.suonk.marvelcomicsapp.repositories.MainRepository
+import com.suonk.marvelcomicsapp.utils.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
