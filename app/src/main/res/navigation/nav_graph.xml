@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.suonk.marvelcomicsapp.ui.fragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_allComicsFragment"
+            app:destination="@id/allComicsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/allComicsFragment"
+        android:name="com.suonk.marvelcomicsapp.ui.fragments.AllComicsFragment"
+        android:label="fragment_all_comics"
+        tools:layout="@layout/fragment_all_comics">
+        <action
+            android:id="@+id/action_allComicsFragment_to_comicsDetailsFragment"
+            app:destination="@id/comicsDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/comicsDetailsFragment"
+        android:name="com.suonk.marvelcomicsapp.ui.fragments.ComicsDetailsFragment"
+        android:label="fragment_comics_details"
+        tools:layout="@layout/fragment_comics_details" />
+</navigation>
